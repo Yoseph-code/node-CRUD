@@ -1,7 +1,5 @@
 const db = require("../config/database");
 
-// ==> Método responsável por criar um novo 'Product':
-
 exports.createProduct = async (req, res) => {
     const { productname, quantity, price } = req.body;
     const { rows } = await db.query(
